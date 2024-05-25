@@ -1,0 +1,17 @@
+{
+    "builds": [
+        {
+            "src": "housing_price_redictor/wsgi.py",
+            "use": "@vercel/python",
+            "config": {
+                "maxLambdaSize": "15mb",
+                "runtime": "python3.9"
+            }
+        }],
+    "routes": [ 
+        {
+            "src": "/(.*)",
+            "dest": "housing_price_redictor/wsgi.py"
+        }
+    ]
+}
